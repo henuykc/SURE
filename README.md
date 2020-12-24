@@ -15,7 +15,10 @@ The data has already annotated with NER system. For a particular relation provid
 The basic configuration of the system mentioned in the paper is given in the config.txt file.
 The system generates the output and saves it in 'Evaluation/Eval_NYT/data/'
 
+## Requirments
+To run the project install NLTK and download NLTK English stopwords, It will do the necessary tokenization and n-gram selection also removing invalid tokens. For clustering algorithm, install sKlearn library.
 
+For sentence encoding install sentence_transformer, and for full documentation about sentence encoding read the work of [Reimers et al.](https://arxiv.org/abs/1908.10084) (Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks)
 
 ### Authors 
 * [Manzoor Ali](https://dice-research.org/ManzoorAli) (DICE, Paderborn University)
