@@ -1,7 +1,7 @@
 # US-BERT
 The code in this repository is based on the paper(Unsupervised relation extraction using BERT based sentence encoding)
 
-To run the relation extraction system uses the following command:
+To run the relation extraction system use the following command:
 
 ```
 python3 main.py Evaluation/Eval_NYT/data/AnnotatedANLP_NYT__sample.txt  PER LOC 2
