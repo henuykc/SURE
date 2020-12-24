@@ -11,3 +11,12 @@ The data has already annotated with NER system. For a particular relation provid
 The basic configuration of the system mentioned in the paper is given in the config.txt file.
 The system generates the output and saves it in 'Evaluation/Eval_NYT/data/'
 
+
+
+### Authors 
+* [Manzoor Ali](https://dice-research.org/ManzoorAli) (DICE, Paderborn University)
+* [Muhammad Saleem](https://sites.google.com/site/saleemsweb/) (AKSW, University of Leipzig)
+* [Axel-Cyrille Ngonga Ngomo](https://dice-research.org/AxelCyrilleNgongaNgomo) (DICE, Paderborn University)
+
+
+
