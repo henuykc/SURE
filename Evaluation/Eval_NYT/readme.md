@@ -7,6 +7,6 @@ To run the script on the sample data for relation:
 
 Install the two packages SparqlWraper and pandas. Run the main script to generate the relations and then run the evaluation script to produce the results.
 
-For another relation, type changes the relationship type in the evaluation script and run the code. (The first step is always the main script to extract relations).
+For another relation type, change the relationship type in the evaluation script and run the code. (The first step is always the main script to extract relations).
 
-The complete dataset with default annotation is available on KAGGLE. To change the default annotation, use the AllenAnnotation script to annotate for NEs.
+The complete dataset with default annotation is available on [KAGGLE](https://www.kaggle.com/duongthanhhung/nyt-relation-extraction). To change the default annotation, use the AllenAnnotation script to annotate for NEs.
