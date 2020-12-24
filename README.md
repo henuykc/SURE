@@ -1,6 +1,10 @@
 # US-BERT
 The code in this repository is based on the paper(Unsupervised relation extraction using BERT based sentence encoding)
 
+
+![](Evaluation/Eval_APW/data/sysnewwas.png)
+
+
 To run the relation extraction system use the following command:
 
 ```
