@@ -15,7 +15,7 @@ def new_patterns(cluster,pharses,similiraty,top_k):
         s , p = index.similirity(cluster,pharses,False,top_k,similiraty) # explain
         return s,p
 def exract_relations_sent(sentence_dict,unique_patterns,sent_with_enities,pat_score):
-    f_output = open("Evaluation_NYT/data/output_relationship.txt", "w")
+    f_output = open("Evaluation/Eval_NYT/data/output_relationship.txt", "w")
     for pat in unique_patterns:
         score = pat_score[pat]
         for key,value in sent_with_enities.items():
@@ -32,7 +32,7 @@ def exract_relations_sent(sentence_dict,unique_patterns,sent_with_enities,pat_sc
 
 def extract_relations_window(sentence_dict,unique_patterns,all_dict,pat_score):
     
-    f_output = open("Evaluation_NYT/data/output_relationship.txt", "w")
+    f_output = open("Evaluation/Eval_NYT/data/output_relationship.txt", "w")
     for pat in unique_patterns:
         score = pat_score[pat]
         bi_pat = ngrams(pat.split(),2)
