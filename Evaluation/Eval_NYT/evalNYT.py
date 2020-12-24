@@ -5,6 +5,9 @@ import fileinput
 import pandas as pd
 import boot_straping.kb as kb
 import codecs
+import sys, os
+
+
 location = ['location','country','city','state_or_province' ]
 def process_output(data,threshold,rel_type):
     system_output = dict()
@@ -48,7 +51,9 @@ def unique_relation(rel_type):
     uniq_dict = {}
     duplicate = 0
     total = 0
-    with codecs.open('selected_PER_LOC.txt','r', encoding='utf-8',
+    filename = os.path.abspath('data/AnnotatedANLP_NYT__sample.txt')
+    print(filename)
+    with codecs.open(filename,'r', encoding='utf-8',
                  errors='ignore') as fdata:
         for line in fdata.readlines():
             
@@ -68,7 +73,7 @@ def unique_relation(rel_type):
         
 def recall(rel_type):
     dictAll = {}
-    for line in fileinput.FileInput('Annotated_ANLP_Train.txt'):
+    for line in fileinput.FileInput('data/AnnotatedANLP_NYT__sample.txt'):
         l = line.split('\t')
         e1 = l[0]
         e2 = l[1]
@@ -131,29 +136,29 @@ def extract_realtion(rel_type,name):
     print('Total number of birth palce relation = ',count)
 def main():
    
-    rel_type = '/business/person/placed_lived'
-    name = 'placed_lived'
+    rel_type = '/people/person/place_of_birth'
+    name = 'place_of_birth'
     
     #extract_realtion(rel_type,name)
     nyt_rel,total = unique_relation(rel_type)
     print(f'unique = {nyt_rel} and total = {total}')
-    S , correct , count= process_output('rel_nat_s.txt',0,rel_type)
+    S , correct , count= process_output('data/output_relationship.txt',0,rel_type)
     print(f'unique output = {S} and all = {count}')
-    print(f'correct = {correct}')
+   # print(f'correct = {correct}')
     all_dataset = recall(rel_type)
     print(f'All from dataset = {all_dataset}')
-    #recal = round(S / (total) , 3)
+    recal = round(S / (total) , 3)
     recal2 = round(count / all_dataset,3)
-    #print('recall',recal)
+    print('recall',recal)
     #print(f'Total System Output = {S}')
     per = round(S / nyt_rel , 3)
     print(f'precision = {per}')
     #rec = S / total
-   # print(f'recall = {rec}')
-    #f1 = 2 * round((per * recal) / (per + recal), 3)
-    #print('f1 score = ',f1)
-    f2 = 2 * round((per * recal2) / (per + recal2), 3)
-    print(f'{per} & {recal2} & {f2} ')
+    #print(f'recall = {rec}')
+    f1 = 2 * round((per * recal) / (per + recal), 3)
+    print('f1 score = ',f1)
+    #f2 = 2 * round((per * recal2) / (per + recal2), 3)
+    #print(f'{per} & {recal2} & {f2} ')
     #print(f'{per} & {recal} & {f1} ')
     #print(f'All = {recall(rel_type)}')
         
