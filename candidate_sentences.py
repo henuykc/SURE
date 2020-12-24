@@ -128,17 +128,7 @@ def Sentence( sentence, e1_type, e2_type, max_tokens, min_tokens,
                 entity_sentences_dict[t] = sentence
                 entity_between_dict[t] = btw
                 entity_all_dict[t] = all_part
-                #print("sentences = " +sentence)
-                #print( before)
-                #print(between)
-                #print("after = " + str(after))
-                #print("entity 1 = " + str(e1.string))
-                #print("entity 2 = " + e2.string)
-                #print("type 1 = " + e1.type)
-                #print("type 2 = " + e2.type)
-                #print('total' + str(count) + 'and selected = ' + str(select))
-    return entity_sentences_dict,entity_between_dict,entity_all_dict
-                #r = Relationship(sentence, before, between, after, e1.string,e2.string, e1_type, e2.type)
-               
-                #self.relationships.append(r)
+                
+    return entity_sentences_dict,entity_all_dict
+                
                 
