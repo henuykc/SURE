@@ -1,5 +1,5 @@
 # SURE: A Sentence encoding based approach for Unsupervised Relation Extraction
-SURE formerly US-BERT is an unsupervised system for relationship extraction relying on sentence vector representations (i.e., sentence enocoding). For more details please refer to: The paper
+SURE is an unsupervised system for relationship extraction relying on sentence vector representations (i.e., sentence enocoding). For more details please refer to: The paper
 
 ## Architecture: system description
 ![](recent.svg)
