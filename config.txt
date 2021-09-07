@@ -1,0 +1,6 @@
+sentence_length: 15
+between_length: 6
+before_after_window: 3
+similiraty: 0.25
+top_similar: 15
+query_term: born in
